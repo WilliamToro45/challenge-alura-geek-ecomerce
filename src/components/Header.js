@@ -1,4 +1,4 @@
-import logo from '../assets/logo.svg'
+import LogoAluraGeek from './LogoAluraGeek';
 import SearchIcon from './SearchIcon';
 
 function Header() {
@@ -6,10 +6,7 @@ function Header() {
         <header className='header'>
             <nav className='navbar'>
                 <div className='navbar__item item1'>
-                    <div className="navbar__item--logo">
-                        <img className='navbar__item--logo-icon' src={logo} alt="Logo Alura Geek"></img>
-                        <span className='navbar__item--logo-name' />
-                    </div>
+                    <LogoAluraGeek/>
                     <div className='navbar__item--search'>
                         <input className='navbar__item--search-input' type='search' placeholder='¿Qué desea buscar?'/>
                         <span className='navbar__item--search-logo'><SearchIcon /></span>
