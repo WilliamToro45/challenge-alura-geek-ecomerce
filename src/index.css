@@ -1,5 +1,6 @@
 :root{
-  --main-color: #2A7AE4
+  --main-color: #2A7AE4;
+  --link-hover-color: #08feff;
 }
 
 * {
@@ -128,6 +129,85 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* Section Gallery products*/
+
+.products-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0.5rem;
+  flex-wrap: wrap;
+  background: #F5F5F5;
+}
+
+.products-galley__category{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding-bottom: 3rem;
+}
+
+.product-list__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-list__head--link {
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.product-list__head--link:hover{
+  color: var(--link-hover-color);
+}
+
+.product-list__body{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-auto-columns: minmax(150px, auto);
+
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
+  background: none;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+.product__img{
+  width: 100%;
+}
+
+.product__price {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.product__link {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.product__link:hover{
+  color: var(--link-hover-color);
+}
+
+
 /* RESPONSIVE */
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
@@ -145,6 +225,20 @@ body {
   .banner {
     padding-left: 1rem;
   }
+
+  .product:nth-child(6){
+    visibility: hidden;
+    display: none;
+  }
+  .product:nth-child(5){
+    visibility: hidden;
+    display: none;
+  }
+
+  .product-list__body{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
 }
 
 
@@ -184,6 +278,10 @@ body {
 
   .banner__paragraph{
     font-size: 14px;
+  }
+
+  .product-list__body{
+    grid-template-columns: repeat(2, 1fr)
   }
 }
 
