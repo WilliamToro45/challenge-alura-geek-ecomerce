@@ -6,7 +6,6 @@ function Contact(){
     }
     return(
         <section className="contact">
-            <div className="contact__section">
                 <div className="contact__logo">
                     <LogoAluraGeek/>
                 </div>
@@ -18,17 +17,16 @@ function Contact(){
                     <li className="contact__list--item">Quiero ser Franquiciado</li>
                     <li className="contact__list--item">Anúncie aquí</li>
                 </ul>
-            </div>
             <form className="contact__form" onSubmit={handelSubmit}>
                 <div className="contact__form--head">
                     <h2 className="contact__form--head-title">Hable con nosotros</h2>
                 </div>
                 <div className="contact__form--body">
                     <label className="contact__form--body-label">
-                        <span>Nombre</span>
-                        <input className="contact__form--body-input" type="text" placeholder="Nombre" />
+                        Nombre
+                        <input className="contact__form--body-input" type="text" placeholder="Ingrese su nombre aquí" />
                     </label>
-                    <textarea className="contact__form--body--textarea" placeholder="Escribe tu mensaje.."/>
+                    <textarea className="contact__form--body--textarea" placeholder="Escriba su mensaje.."/>
                 </div>
                 <button className="contact__form--button" type="submit">Enviar mensaje</button>
             </form>
