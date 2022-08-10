@@ -1,4 +1,5 @@
 import Banner from "./components/Banner";
+import Contact from "./components/Contact";
 import Header from "./components/Header";
 import ProductsGallery from "./components/ProductsGallery";
 
@@ -8,6 +9,7 @@ function App() {
       <Header/>
       <Banner/>
       <ProductsGallery />
+      <Contact/>
     </div>
   );
 }
