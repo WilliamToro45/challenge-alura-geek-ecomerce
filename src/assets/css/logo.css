@@ -1,0 +1,18 @@
+
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo__name::before {
+    content: 'Alura';
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .logo__name:after {
+    content: 'Geek';
+    font-size: 20px;
+    font-weight: bold;
+  }
