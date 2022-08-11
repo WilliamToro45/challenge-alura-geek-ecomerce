@@ -14,7 +14,7 @@ function Header() {
   const [buttonTextContent, setButtonTextContent] = React.useState("Login");
 
   React.useEffect(() => {
-    if(currentPathName.includes("login")) return setIsButtonVisible(false);
+    if(currentPathName.includes("login") || currentPathName.includes("products")) return setIsButtonVisible(false);
 
     if(currentPathName.includes("admin")) {
       setIsButtonVisible(true);
