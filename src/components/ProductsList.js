@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ProductCard from "./ProductCard";
 import { AiOutlineArrowRight } from 'react-icons/ai';
 /**
@@ -12,7 +13,7 @@ function ProductsList({ category , productsByCategory }){
         <div className="product-list">
             <div className="product-list__head">
                 <h2 className="product-list__head--title">{category}</h2>
-                <a href={`#${category}`} className="product-list__head--link">Ver todo <AiOutlineArrowRight/></a>
+                <Link to="products" className="product-list__head--link">Ver todo <AiOutlineArrowRight/></Link>
             </div>
             <div className="product-list__body">
                 {
