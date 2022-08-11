@@ -66,7 +66,9 @@ body {
   width: 100%;
   padding-left: 10px;
 }
-
+.navbar__item--link{
+  width: 100%;
+}
 .navbar__item--button {
   height: 40px;
   width: 100%;
