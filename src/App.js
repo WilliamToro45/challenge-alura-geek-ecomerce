@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Error from "./pages/Error";
+import PageNotFound from "./pages/PageNotFound";
 import SharedLayout from "./pages/SharedLayout";
 import Login from "./pages/Login";
 
@@ -12,7 +12,7 @@ function App() {
             <Route index element={ <Home/> }/>
             <Route path="login" element={ <Login/> }/>
           </Route>
-          <Route path="*" element={ <Error/> }/>
+          <Route path="*" element={ <PageNotFound/> }/>
         </Routes>
       </BrowserRouter>
   );
