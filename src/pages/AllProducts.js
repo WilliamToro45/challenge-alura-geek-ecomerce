@@ -8,7 +8,7 @@ function AllProducts(){
         <section className="all-products">
                 <div className="all-products__head">
                     <h2 className="all-products__head--title" >Todos los productos</h2>
-                    <Link to="add-product">
+                    <Link to="/add-product">
                         <button className="all-products__head--button">Agregar producto</button>
                     </Link>
                 </div>
