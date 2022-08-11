@@ -4,6 +4,7 @@ import PageNotFound from "./pages/PageNotFound";
 import SharedLayout from "./pages/SharedLayout";
 import Login from "./pages/Login";
 import AllProducts from "./pages/AllProducts";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route index element={ <Home/> }/>
             <Route path="products" element={ <AllProducts/> }/>
             <Route path="login" element={ <Login/> }/>
+            <Route path="add-product" element={ <AddProduct/> }/>
           </Route>
           <Route path="*" element={ <PageNotFound/> }/>
         </Routes>
