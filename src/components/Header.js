@@ -12,16 +12,20 @@ function Header() {
   const currentPathName = useLocation().pathname;
   const [isButtonVisible, setIsButtonVisible] = React.useState(true);
   const [buttonTextContent, setButtonTextContent] = React.useState("Login");
-
+  const [redirectTo, setRedirectTo] = React.useState("login")
   React.useEffect(() => {
     if(currentPathName.includes("login") || currentPathName.includes("products")) return setIsButtonVisible(false);
 
-    if(currentPathName.includes("admin")) {
+    if(currentPathName.includes("add-product")) {
       setIsButtonVisible(true);
-      setButtonTextContent("Menú Administrador")
+      setButtonTextContent("Administrador")
+      setRedirectTo("products");
+      return;
     };
     
     setIsButtonVisible(true);
+    setRedirectTo("login");
+    setButtonTextContent("Login")
 
   }, [currentPathName]);
 
@@ -44,7 +48,7 @@ function Header() {
         {isButtonVisible && (
           <div className="navbar__item item2">
             <Link
-              to="login"
+              to={redirectTo}
               className="navbar__item--link"
               style={{ textDecoration: "none", color: "var(--main-color)" }}
             >
