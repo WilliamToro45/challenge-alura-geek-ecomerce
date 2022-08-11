@@ -5,7 +5,7 @@ import ProductsList from "./ProductsList";
  * 
  * @returns - Gallery for each unique type of products.
  */
-function ProductsGallery(){
+function ProductsGalleryByCategory(){
     // Get unique categories
     const categories = [...new Set(products.map(product => product.category))];
     
@@ -26,4 +26,4 @@ function ProductsGallery(){
     )
 }
 
-export default ProductsGallery;
+export default ProductsGalleryByCategory;
