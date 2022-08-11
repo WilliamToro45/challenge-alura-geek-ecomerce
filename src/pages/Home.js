@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import ProductsGallery from "../components/ProductsGallery";
+import ProductsGalleryByCategory from "../components/ProductsGalleryByCategory";
 
 /**
  * 
@@ -10,7 +10,7 @@ function Home(){
     return(
         <>
             <Banner/>        
-            <ProductsGallery />
+            <ProductsGalleryByCategory />
         </>
     );
 }
