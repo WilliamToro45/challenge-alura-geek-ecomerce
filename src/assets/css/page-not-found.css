@@ -1,0 +1,18 @@
+.page-not-found{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: var(--link-hover-color);
+}
