@@ -1,20 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
+import SharedLayout from "./pages/SharedLayout";
+import Login from "./pages/Login";
 
 function App() {
   return (
       <BrowserRouter>
-        <Header/>
-        <Routes>
-          <Route path="/" element={ <Home/> }/>
+        <Routes> 
+          <Route path="/" element={ <SharedLayout/> }>
+            <Route index element={ <Home/> }/>
+            <Route path="login" element={ <Login/> }/>
+          </Route>
           <Route path="*" element={ <Error/> }/>
         </Routes>
-        <Contact/>
-        <Footer/>
       </BrowserRouter>
   );
 }
